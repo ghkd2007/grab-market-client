@@ -6,7 +6,7 @@
 	height: 64px;
 }
 #body {
-	height: 100%;
+	height: 100vh;
 	width: 1024px;
 	margin: 0 auto;
 }
@@ -72,4 +72,8 @@
 }
 .product_avatar {
 	width: 20px;
+}
+.product_link {
+	color: inherit;
+	text-decoration: none;
 }
