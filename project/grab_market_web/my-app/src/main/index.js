@@ -13,7 +13,7 @@ function MainPageComponent() {
 			.then(function (result) {
 				//console.log(result);
 				const products = result.data.products;
-				console.log(typeof products);
+				console.log(products);
 				setProducts(products);
 			})
 			.catch(function (error) {
@@ -23,40 +23,32 @@ function MainPageComponent() {
 
 	return (
 		<div>
-			<div id="header">
-				<div id="header_area">
-					<img src="images/icons/logo.png" alt="로고" />
-				</div>
+			<div id="banner">
+				<img src="images/banners/banner1.png" alt="" />
 			</div>
-			<div id="body">
-				<div id="banner">
-					<img src="images/banners/banner1.png" alt="" />
-				</div>
-				<h1>판매되는 상품들</h1>
-				<div id="product_list">
-					{products.map((product, index) => (
-						<div className="product_card">
-							<Link className="product_link" to={`/products/${index}`}>
-								<div>
-									<img className="product_img" src={product.imageUrl} />
+			<h1>판매되는 상품들</h1>
+			<div id="product_list">
+				{products.map((product, index) => (
+					<div className="product_card">
+						<Link className="product_link" to={`/products/${product.id}`}>
+							<div>
+								<img className="product_img" src={product.imageUrl} />
+							</div>
+							<div className="product_contents">
+								<span className="product_name">{product.name}</span>
+								<span className="product_price">{product.price}</span>
+								<div className="product_seller">
+									<img
+										className="product_avatar"
+										src="images/icons/avatar.png"
+									/>
+									<span>{product.seller}</span>
 								</div>
-								<div className="product_contents">
-									<span className="product_name">{product.name}</span>
-									<span className="product_price">{product.price}</span>
-									<div className="product_seller">
-										<img
-											className="product_avatar"
-											src="images/icons/avatar.png"
-										/>
-										<span>{product.seller}</span>
-									</div>
-								</div>
-							</Link>
-						</div>
-					))}
-				</div>
+							</div>
+						</Link>
+					</div>
+				))}
 			</div>
-			<div id="footer"></div>
 		</div>
 	);
 }
