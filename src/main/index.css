@@ -23,7 +23,7 @@
 }
 
 #body {
-    height: 100%;
+    height: 100vh;
     width: 1024px;
     margin : 0 auto;
     padding-bottom: 24;
@@ -87,6 +87,11 @@
 
 .product-avatar {
     width: 24px;
+}
+
+.product-link{
+    color: inherit;
+    text-decoration: none;
 }
 
 #footer {
