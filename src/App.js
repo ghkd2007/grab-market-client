@@ -8,11 +8,19 @@ import ProductPage from "./products/index.js";
 function App() {
 	return (
 		<div>
-			<Routes>
-				<Route path={"/"} element={<MainPageComponent />} />
-				<Route path="/product/:id" element={<ProductPage />} />
-				<Route path="/upload" element={<UploadPage />} />
-			</Routes>
+			<div id="header">
+				<div id="header-area">
+					<img src="/images/icons/logo.png" alt="" />
+				</div>
+			</div>
+			<div id="body">
+				<Routes>
+					<Route path={"/"} element={<MainPageComponent />} />
+					<Route path="/product/:id" element={<ProductPage />} />
+					<Route path="/upload" element={<UploadPage />} />
+				</Routes>
+			</div>
+			<div id="footer"></div>
 		</div>
 	);
 }

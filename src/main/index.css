@@ -3,12 +3,7 @@
     padding: 0;
 }
 
-#header {
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid gray;
-}
+
 
 #header-area {
     width: 1024px;
@@ -22,12 +17,7 @@
     height: 36px;
 }
 
-#body {
-    height: 100vh;
-    width: 1024px;
-    margin : 0 auto;
-    padding-bottom: 24;
-}
+
 
 #banner {
     height: 300px;
@@ -94,8 +84,5 @@
     text-decoration: none;
 }
 
-#footer {
-    height: 80px;
-    background-color: red;
-}
+
 
